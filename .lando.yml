@@ -2,3 +2,6 @@ name: hestia-app
 recipe: laravel
 config:
   webroot: app/public
+  cache: redis
+  xdebug: true
+
