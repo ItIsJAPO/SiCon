@@ -1,0 +1,4 @@
+name: hestia-app
+recipe: laravel
+config:
+  webroot: app/public
