@@ -18,6 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->integer('user_type')->unsigned()->default(3);
+            $table->string('cargo');
             $table->rememberToken();
 //            $table->foreignId('unidad_administrativa_id')->nullable();
             $table->text('profile_photo_path')->nullable();

@@ -14,7 +14,7 @@ class AlterInUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('unidad_administrativa_id')->nullable()->constrained("unidades_administrativas");
+            $table->foreignId('unidad_administrativa_id')->nullable()->after('cargo')->references("id")->on('unidades_administrativas');
         });
     }
 
@@ -26,7 +26,7 @@ class AlterInUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign('users_unidad_administrativa_id_foreign');
+//            $table->dropForeign('');
         });
     }
 }

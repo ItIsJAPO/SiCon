@@ -27,6 +27,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'user_type',
+        'cargo',
     ];
 
     /**
@@ -55,4 +57,9 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function unidad_administrativa()
+    {
+        return $this->belongsTo(UnidadAdministrativa::class);
+    }
 }
