@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 
 class UsuariosController extends Controller
 {
+
+    public $search="vi";
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +19,7 @@ class UsuariosController extends Controller
     {
 //        dd(User::all());
         return view('usuarios.index',[
-            'usuarios'=>User::all()
+            'usuarios'=>User::where('name',$this->search)->paginate(2),'search'=>$this->search
         ]);
         //
     }

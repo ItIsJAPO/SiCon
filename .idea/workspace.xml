@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f59c9022-269c-4e24-8075-a0f86d27c06f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/UsuariosController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/usuarios/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SiCon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SiCon.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/UsuariosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/UsuariosController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database/migrations/2020_11_21_080004_alter_in_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/migrations/2020_11_21_080004_alter_in_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/navigation-dropdown.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/usuarios/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,6 +162,10 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/resources/views/livewire" />
+      <recent name="$PROJECT_DIR$/app/resources/views/usuarios" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/app/resources/views" />
@@ -188,7 +184,9 @@
       <workItem from="1605858150743" duration="17257000" />
       <workItem from="1605984066593" duration="1537000" />
       <workItem from="1606117205979" duration="2764000" />
-      <workItem from="1606163072509" duration="12348000" />
+      <workItem from="1606163072509" duration="13512000" />
+      <workItem from="1606537984759" duration="6198000" />
+      <workItem from="1606641909703" duration="453000" />
     </task>
     <servers />
   </component>
@@ -204,6 +202,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="515" y="330" width="937" height="535" key="#Log_Highlighting_(ideolog)/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1605863066094" />
+    <state x="578" y="284" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606543078757">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="578" y="284" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606543078757" />
     <state x="660" y="452" key="NewPhpFileDialog" timestamp="1606119501581">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

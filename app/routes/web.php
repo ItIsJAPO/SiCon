@@ -28,7 +28,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get(
     }
 )->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->resource(
-    'usuarios',
-    UsuariosController::class
-)->names('usuarios');
+Route::middleware(['auth:sanctum', 'verified'])->get(
+    '/empleados',
+    \App\Http\Livewire\UsersTable::class
+)->name('empleados');
+
+//Route::middleware(['auth:sanctum', 'verified'])->resource(
+//    'usuarios',
+//    UsuariosController::class
+//)->names('usuarios');
