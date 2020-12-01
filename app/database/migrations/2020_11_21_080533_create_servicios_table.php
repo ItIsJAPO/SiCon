@@ -15,7 +15,7 @@ class CreateServiciosTable extends Migration
     {
         Schema::create('servicios', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('unidad_administrativa_id')->nullable()->constrained("unidades_administrativas");
+            $table->foreignId('unidad_administrativa_id')->nullable()->references("id")->on('unidades_administrativas');
             $table->longText('problema');
             $table->longText('solucion');
             $table->integer('estatus')->unsigned();

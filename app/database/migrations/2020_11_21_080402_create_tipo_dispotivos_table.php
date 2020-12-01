@@ -13,10 +13,9 @@ class CreateTipoDispotivosTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_dispositivos', function (Blueprint $table) {
+        Schema::create('type_devices', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->integer('estatus')->unsigned();
+            $table->string('nombre')->unique();
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateTipoDispotivosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_dispotivos');
+        Schema::dropIfExists('type_device');
     }
 }

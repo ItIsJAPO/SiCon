@@ -23,7 +23,6 @@ class UnidadAdministrativaFactory extends Factory
     {
         return [
             'nombre' => $this->faker->sentence,
-            'estatus' => $this->faker->randomElement([1,2]),
         ];
     }
 }

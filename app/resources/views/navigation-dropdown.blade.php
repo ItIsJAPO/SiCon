@@ -6,7 +6,8 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                        <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg">
+{{--                        <x-jet-application-mark class="block h-9 w-auto" />--}}
                     </a>
                 </div>
 
@@ -15,8 +16,11 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('empleados') }}" :active="request()->routeIs('empleados')">
+                    <x-jet-nav-link href="{{ route('empleados.index') }}" :active="request()->routeIs('empleados.*')">
                         Empleados
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('catalogs') }}" :active="request()->routeIs('catalogs.*')|request()->routeIs('type_devices.*')">
+                        Catalogos
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -123,7 +127,7 @@
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('empleados') }}" :active="request()->routeIs('empleados')">
+            <x-jet-responsive-nav-link href="{{ route('empleados.index') }}" :active="request()->routeIs('empleados.*')">
                 Empleados
             </x-jet-responsive-nav-link>
         </div>

@@ -17,7 +17,7 @@ class CreateDispotivosTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('folio');
-            $table->foreignId('tipo_dispositivo_id')->constrained("tipo_dispositivos");
+            $table->foreignId('type_device_id')->constrained("type_devices");
             $table->float('precio_unitario');
             $table->integer('estatus')->unsigned();
             $table->timestamps();

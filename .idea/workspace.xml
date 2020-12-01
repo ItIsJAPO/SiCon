@@ -2,10 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f59c9022-269c-4e24-8075-a0f86d27c06f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/TypeDeviceController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Livewire/TypeDeviceTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/TypeDeviceRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Models/TypeDevice.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/catalogos.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/layouts/inicio.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/livewire/type-device-table.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/partials/session-status.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/partials/validation-errors.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/type_device/_form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/type_device/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/type_device/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/type_device/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/usuarios/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/usuarios/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/UsuariosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/UsuariosController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/factories/UnidadAdministrativaFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/factories/UnidadAdministrativaFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/migrations/2020_11_21_070030_create_unidades_administrativas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/migrations/2020_11_21_070030_create_unidades_administrativas_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/migrations/2020_11_21_080402_create_tipo_dispotivos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/migrations/2020_11_21_080402_create_tipo_dispotivos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/migrations/2020_11_21_080453_create_dispotivos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/migrations/2020_11_21_080453_create_dispotivos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/migrations/2020_11_21_080533_create_servicios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/migrations/2020_11_21_080533_create_servicios_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/livewire/users-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/livewire/users-table.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/navigation-dropdown.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/users.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/usuarios/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
     </list>
@@ -26,6 +51,7 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="devwithlando/php:7.3-apache-2">
     <include_path>
       <path value="$PROJECT_DIR$/app/vendor/voku/portable-ascii" />
@@ -148,17 +174,20 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1kXsDMVRRDlBKciUZVqIRULT8ym" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/app/Http/Controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/resources/views/type_device" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -167,10 +196,11 @@
       <recent name="$PROJECT_DIR$/app/resources/views/usuarios" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/resources/views/type_device" />
+      <recent name="$PROJECT_DIR$/app/app/Models" />
+      <recent name="$PROJECT_DIR$/app/resources/views/livewire" />
+      <recent name="$PROJECT_DIR$/app/app/Http/Livewire" />
       <recent name="$PROJECT_DIR$/app/app/Http/Controllers" />
-      <recent name="$PROJECT_DIR$/app/resources/views" />
-      <recent name="$PROJECT_DIR$/app/resources/lang" />
-      <recent name="$PROJECT_DIR$/app/resources/lang/es" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -186,12 +216,18 @@
       <workItem from="1606117205979" duration="2764000" />
       <workItem from="1606163072509" duration="13512000" />
       <workItem from="1606537984759" duration="6198000" />
-      <workItem from="1606641909703" duration="453000" />
+      <workItem from="1606641909703" duration="1641000" />
+      <workItem from="1606716638489" duration="451000" />
+      <workItem from="1606717773679" duration="13903000" />
+      <workItem from="1606782515825" duration="16444000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="623" y="71" key="#CLI_Interpreters" timestamp="1605859333874">
@@ -202,21 +238,29 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="515" y="330" width="937" height="535" key="#Log_Highlighting_(ideolog)/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1605863066094" />
-    <state x="578" y="284" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606543078757">
+    <state x="578" y="284" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606805132363">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="284" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606543078757" />
-    <state x="660" y="452" key="NewPhpFileDialog" timestamp="1606119501581">
+    <state x="578" y="284" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606805132363" />
+    <state x="660" y="452" key="NewPhpFileDialog" timestamp="1606810962511">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="622" y="-615" key="NewPhpFileDialog/-132.-1080.1920.1080/0.0.1680.1050@-132.-1080.1920.1080" timestamp="1606799888780" />
+    <state x="660" y="452" key="NewPhpFileDialog/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606810962511" />
     <state x="660" y="452" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1606119501581" />
-    <state x="544" y="67" key="SettingsEditor" timestamp="1605859369197">
+    <state x="544" y="67" key="SettingsEditor" timestamp="1606717944851">
+      <screen x="0" y="25" width="1680" height="964" />
+    </state>
+    <state x="544" y="67" key="SettingsEditor/-132.-1055.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1606717944851" />
+    <state x="544" y="67" key="SettingsEditor/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606717376977" />
+    <state x="486" y="-792" width="699" height="504" key="find.popup" timestamp="1606798629479">
+      <screen x="-132" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="486" y="-792" width="699" height="504" key="find.popup/-132.-1080.1920.1080/0.0.1680.1050@-132.-1080.1920.1080" timestamp="1606798629479" />
+    <state x="541" y="280" width="611" height="490" key="find.popup/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606787670031" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1606809739551">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="544" y="67" key="SettingsEditor/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1605859369197" />
-    <state x="541" y="280" width="611" height="490" key="find.popup" timestamp="1605896243644">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="541" y="280" width="611" height="490" key="find.popup/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1605896243644" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606809739551" />
   </component>
 </project>

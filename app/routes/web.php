@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TypeDeviceController;
 use App\Http\Controllers\UsuariosController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get(
     '/',
     function () {
-        return view('welcome');
+        return view('layouts.inicio');
     }
 );
 
@@ -28,12 +29,28 @@ Route::middleware(['auth:sanctum', 'verified'])->get(
     }
 )->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get(
-    '/empleados',
-    \App\Http\Livewire\UsersTable::class
-)->name('empleados');
+//Route::middleware(['auth:sanctum', 'verified'])->get(
+//    '/empleados',
+//    \App\Http\Livewire\UsersTable::class
+//)->name('empleados');
 
-//Route::middleware(['auth:sanctum', 'verified'])->resource(
-//    'usuarios',
-//    UsuariosController::class
-//)->names('usuarios');
+Route::middleware(['auth:sanctum', 'verified'])->resource(
+    'empleados',
+    UsuariosController::class
+)->names('empleados');
+
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get(
+    '/catalogs',
+    function () {
+        return view('catalogos');
+    }
+)->name('catalogs');
+
+
+Route::middleware(['auth:sanctum', 'verified'])->resource(
+    'catalogs/type_devices',
+    TypeDeviceController::class
+)->names('type_devices');
+

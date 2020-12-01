@@ -17,8 +17,7 @@ class CreateUnidadesAdministrativasTable extends Migration
             'unidades_administrativas',
             function (Blueprint $table) {
                 $table->id();
-                $table->string('nombre');
-                $table->integer('estatus')->unsigned();
+                $table->string('nombre')->unique();
                 $table->timestamps();
             }
         );

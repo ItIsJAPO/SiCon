@@ -2,14 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
-use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -19,6 +17,7 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+    const ROL_ADMIN = 1;
     /**
      * The attributes that are mass assignable.
      *
@@ -59,7 +58,7 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function unidad_administrativa()
+    public function unidadAdministrativa()
     {
         return $this->belongsTo(UnidadAdministrativa::class);
     }

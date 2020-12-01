@@ -2,10 +2,10 @@
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Empleados
+            Catalogo: Tipos de dispotivo
         </h2>
     </x-slot>
 
-    <livewire:users-table></livewire:users-table>
+    <livewire:type-device-table></livewire:type-device-table>
 
 </x-app-layout>
