@@ -16,7 +16,7 @@ class UnidadAdministrativa extends Model
      * @var array
      */
     protected $fillable = [
-
+        'nombre',
     ];
 
     /**

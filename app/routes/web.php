@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdministrativeUnitController;
 use App\Http\Controllers\TypeDeviceController;
 use App\Http\Controllers\UsuariosController;
 use Illuminate\Support\Facades\Route;
@@ -53,4 +54,9 @@ Route::middleware(['auth:sanctum', 'verified'])->resource(
     'catalogs/type_devices',
     TypeDeviceController::class
 )->names('type_devices');
+
+Route::middleware(['auth:sanctum', 'verified'])->resource(
+    'catalogs/administrative_units',
+    AdministrativeUnitController::class
+)->names('administrative_units');
 
