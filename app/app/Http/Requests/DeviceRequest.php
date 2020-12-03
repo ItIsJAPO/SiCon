@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class AdministrativeUnitRequest extends FormRequest
+class DeviceRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,16 +28,23 @@ class AdministrativeUnitRequest extends FormRequest
         return [
             'nombre' => [
                 'required',
-                Rule::unique('unidades_administrativas')->ignore($this->route('administrative_unit')),
-            ]
+
+            ],
+            'folio' => [
+                Rule::unique('dispositivos')->ignore($this->route('device')),
+            ],
+            'precio_unitario' => [
+                'required',
+            ],
         ];
     }
 
     public function messages()
     {
         return [
-            'nombre.required' => "El nombre de la nueva unidad administrativa es obligatorio.",
-            'nombre.unique' => "El nombre de la nueva unidad administrativa ya ha sido registrado.",
+            'nombre.required' => "El nombre del nuevo dispositivo es obligatorio.",
+            'folio.unique' => "El folio ya se encuentra registrado",
+            'precio_unitario.required' => "El precio del nuevo dispositivo es obligatorio.",
         ];
     }
 }

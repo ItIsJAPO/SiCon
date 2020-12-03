@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TypeDevice extends Model
+class Device extends Model
 {
     use HasFactory;
 
 
-    protected $table = 'type_devices';
+    protected $table = 'dispositivos';
     /**
      * The attributes that are mass assignable.
      *
@@ -18,6 +18,10 @@ class TypeDevice extends Model
      */
     protected $fillable = [
         'nombre',
+        'folio',
+        'type_device_id',
+        'precio_unitario',
+        'estatus',
     ];
 
     /**
@@ -43,9 +47,14 @@ class TypeDevice extends Model
      * @var array
      */
 
-    public function devices()
+    public function typeDevice()
     {
-        return $this->hasMany(Device::class);
+        return $this->belongsTo(TypeDevice::class);
+    }
+
+    public function resguardos()
+    {
+        return $this->hasOne(Resguardo::class);
     }
 
 }

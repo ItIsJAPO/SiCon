@@ -15,8 +15,8 @@ class CreateResguardosTable extends Migration
     {
         Schema::create('resguardos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('dispositivo_id')->constrained("dispositivos");
-            $table->foreignId('usuario_id')->constrained("users");
+            $table->foreignId('device_id')->constrained("dispositivos");
+            $table->foreignId('user_id')->constrained("users");
             $table->integer('estatus')->unsigned();
             $table->timestamps();
         });

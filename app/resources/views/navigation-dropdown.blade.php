@@ -26,6 +26,9 @@
                                     request()->routeIs('administrative_units.*')">
                         Catalogos
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('devices.index') }}" :active="request()->routeIs('devices.*')">
+                        Dispositivos
+                    </x-jet-nav-link>
                 </div>
             </div>
 
