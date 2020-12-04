@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -24,7 +25,7 @@ class UsersTable extends Component
         return view(
             'livewire.users-table',
             [
-                'usuarios' => User::where('name', 'LIKE', "%{$this->search}%")->paginate($this->perPage)
+                'usuarios' => User::where('name', 'LIKE', "%{$this->search}%")->where('id','<>',Auth::user()->id)->paginate($this->perPage)
             ]
         );
     }

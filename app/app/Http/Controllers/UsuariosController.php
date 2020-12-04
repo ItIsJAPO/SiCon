@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserRequest;
 use App\Models\UnidadAdministrativa;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Str;
 
 class UsuariosController extends Controller
 {
@@ -32,6 +35,7 @@ class UsuariosController extends Controller
             return view(
                 'usuarios.create',
                 [
+                    "user" => new User(),
                     "unidades_administrativas" => UnidadAdministrativa::all(),
                 ]
             );
@@ -45,21 +49,23 @@ class UsuariosController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
-//        return $request->get('name');
-       User::create(
+        $request->validated();
+        User::create(
             [
                 'name' => $request->get('name'),
                 'email' => $request->get('email'),
                 'cargo' => $request->get('cargo'),
                 'user_type' => $request->get('rol'),
-                'password' => Hash::make(uniqid()),
+                'password' => Hash::make(Str::random(25)),
+                'unidad_administrativa_id' => $request->get('unidad_administrativa'),
             ]
         );
-
-
-        //
+        Password::sendResetLink(
+            $request->only('email')
+        );
+        return redirect()->route('empleados.index')->with('status', 'El nuevo empleado fue creado con éxito');
     }
 
     /**
@@ -72,15 +78,7 @@ class UsuariosController extends Controller
     {
 //        dd(Auth::user());
 //        return $empleado;
-        return view(
-            'usuarios.show',
-            [
-                "user" => $empleado,
-                "unidades_administrativas" => UnidadAdministrativa::all(),
-                'current_user' => Auth::user(),
 
-            ]
-        );
     }
 
     /**
@@ -89,9 +87,17 @@ class UsuariosController extends Controller
      * @param \App\Models\UnidadAdministrativa $unidadAdministrativa
      * @return \Illuminate\Http\Response
      */
-    public function edit($unidadAdministrativa)
+    public function edit(User $empleado)
     {
-        //
+
+        return view(
+            'usuarios.edit',
+            [
+                "user" => $empleado,
+                "unidades_administrativas" => UnidadAdministrativa::all(),
+
+            ]
+        );
     }
 
     /**
@@ -101,19 +107,20 @@ class UsuariosController extends Controller
      * @param \App\Models\UnidadAdministrativa $unidadAdministrativa
      * @return \Illuminate\Http\Response
      */
-    public function update( User $empleado,Request $request)
+    public function update(UserRequest $request, User $empleado)
     {
-//        dd($empleado);
-//        dd($request->get('name'));
+        $request->validated();
         $empleado->update(
             [
                 'name' => $request->get('name'),
                 'email' => $request->get('email'),
-                'cargo' => $empleado->cargo,
+                'cargo' => $request->get('cargo'),
                 'user_type' => $request->get('rol'),
+                'password' => Hash::make(Str::random(25)),
+                'unidad_administrativa_id' => $request->get('unidad_administrativa'),
             ]
         );
-        return redirect()->route('empleados.show',1);
+        return redirect()->route('empleados.index')->with('status', 'El nuevo empleado fue actualizado con éxito');
         //
     }
 

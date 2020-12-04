@@ -1,12 +1,17 @@
 <div class=" py-12 mt-5  lg:mt-0 lg:ml-4">
-    <span class="sm:ml-3">
-        <a href="{{ route('empleados.create') }}">
-             <button type="button"
-                     class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                 Nuevo empleado
-             </button>
-        </a>
-    </span>
+
+    @include('partials.session-status')
+    <div class="-m-2 text-center pb-5">
+        <div class="p-1 sm:ml-3">
+
+            <a href="{{ route('empleados.create') }}">
+                <button type="button"
+                        class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Nuevo empleado
+                </button>
+            </a>
+        </div>
+    </div>
     <div>
 
         <div class="py-12">
@@ -85,8 +90,8 @@
                                                     </td>
                                                     <td class="px-6 py-4 whitespace-nowrap">
                                                         <div class="text-sm text-gray-900">
-                                                            @if($usuario->unidad_administrativa!==null)
-                                                                {{$usuario->unidad_administrativa->nombre}}
+                                                            @if($usuario->unidad_administrativa_id)
+                                                                {{$usuario->unidadAdministrativa->nombre}}
                                                             @else
                                                                 <span
                                                                     class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
@@ -96,7 +101,7 @@
 
                                                         </div>
                                                         <div class="text-sm text-gray-500">
-                                                            @if($usuario->unidad_administrativa!==null)
+                                                            @if($usuario->unidad_administrativa_id)
                                                                 {{$usuario->cargo}}
                                                             @endif
                                                         </div>
@@ -122,7 +127,7 @@
                                                         @endswitch
                                                     </td>
                                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                        <a href="{{ route('empleados.show',$usuario) }}"
+                                                        <a href="{{ route('empleados.edit',$usuario) }}"
                                                            class="text-indigo-600 hover:text-indigo-900">Editar</a>
                                                     </td>
                                                 </tr>

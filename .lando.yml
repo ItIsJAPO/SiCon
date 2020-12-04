@@ -4,4 +4,7 @@ config:
   webroot: app/public
   cache: redis
   xdebug: true
-
+services:
+  mail:
+    type: mailhog
+    portforward: true
