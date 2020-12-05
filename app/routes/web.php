@@ -71,8 +71,13 @@ Route::middleware(['auth:sanctum', 'verified'])->resource(
     DevicesController::class
 )->names('devices');
 
+//Route::middleware(['auth:sanctum', 'verified'])->get(
+//    'resguardos/create',
+//   [ReguardosController::class, 'create']
+//)->name('resguardos');
+
 Route::middleware(['auth:sanctum', 'verified'])->resource(
     'resguardos',
     ReguardosController::class
-)->names('resguardos');
+)->names('resguardos')->only(['create','store', 'destroy']);
 
