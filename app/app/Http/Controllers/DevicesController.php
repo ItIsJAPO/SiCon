@@ -108,7 +108,7 @@ class DevicesController extends Controller
      * @param \App\Models\Devices $Devices
      * @return \Illuminate\Http\Response
      */
-    public function update(Device $device, Request $request)
+    public function update(Device $device, DeviceRequest $request)
     {
         $device->update(
             [

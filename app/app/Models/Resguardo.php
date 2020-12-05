@@ -19,15 +19,16 @@ class Resguardo extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre',
-        'folio',
-        'type_device_id',
-        'precio_unitario',
-        'estatus',
+        'device_id',
+        'user_id',
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    public function device()
+    {
+        return $this->belongsTo(Device::class);
     }
 }

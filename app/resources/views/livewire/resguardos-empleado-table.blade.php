@@ -4,10 +4,10 @@
     <div class="-m-2 text-center pb-5">
         <div class="p-1 sm:ml-3">
 
-            <a href="{{ route('empleados.create') }}">
+            <a href="{{ route('devices.create') }}">
                 <button type="button"
                         class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Nuevo empleado
+                    Nuevo dispositivo
                 </button>
             </a>
         </div>
@@ -43,7 +43,7 @@
                                             </button>
                                         @endif
                                     </div>
-                                    @if($usuarios->count())
+                                    @if($devices->count())
                                         <table class="min-w-full divide-y divide-gray-200">
                                             <thead>
                                             <tr>
@@ -53,15 +53,15 @@
                                                 </th>
                                                 <th scope="col"
                                                     class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                    Unidad administrativa
+                                                    Tipo de dispositivo
+                                                </th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                    Asignado
                                                 </th>
                                                 <th scope="col"
                                                     class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                                     Estatus
-                                                </th>
-                                                <th scope="col"
-                                                    class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                    Rol del sistema
                                                 </th>
                                                 <th scope="col" class="px-6 py-3 bg-gray-50">
                                                     <span class="sr-only">Acciones</span>
@@ -69,70 +69,53 @@
                                             </tr>
                                             </thead>
                                             <tbody class="bg-white divide-y divide-gray-200">
-                                            @foreach($usuarios as $usuario)
+                                            @foreach($devices as $device)
                                                 <tr>
                                                     <td class="px-6 py-4 whitespace-nowrap">
-                                                        <div class="flex items-center">
-                                                            <div class="flex-shrink-0 h-10 w-10">
-                                                                <img class="h-10 w-10 rounded-full"
-                                                                     src="{{$usuario->getProfilePhotoUrlAttribute()}}"
-                                                                     alt="">
-                                                            </div>
-                                                            <div class="ml-4">
-                                                                <div class="text-sm font-medium text-gray-900">
-                                                                    {{ $usuario->name}}
-                                                                </div>
-                                                                <div class="text-sm text-gray-500">
-                                                                    {{ $usuario->email}}
-                                                                </div>
-                                                            </div>
+                                                        <div class="text-sm text-gray-900">
+                                                            {{$device->nombre}}
+                                                        </div>
+                                                        <div class="text-sm text-gray-500">
+                                                            Folio: {{$device->folio}}
                                                         </div>
                                                     </td>
-                                                    <td class="px-6 py-4 whitespace-nowrap">
-                                                        <div class="text-sm text-gray-900">
-                                                            @if($usuario->unidad_administrativa_id)
-                                                                {{$usuario->unidadAdministrativa->nombre}}
+                                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+
+                                                        {{ $device->typeDevice->nombre}}
+
+                                                    </td>
+                                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                                        @if($device->resguardos)
+                                                            {{ $device->resguardos->user->name}}
+                                                        @else
+                                                            <span
+                                                                class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                                         Sin asignar
+                                                        </span>
+
+                                                        @endif
+                                                    </td>
+
+                                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                                        @if($device->resguardos)
+                                                            Asignado
+                                                        @else
+                                                            @if($device->estatus==1)
+                                                                <span
+                                                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                                                    Disponible para prestamo
+                                                                </span>
                                                             @else
                                                                 <span
                                                                     class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
-                                                        Sin Unidad admistrativa
-                                                        </span>
+                                                                    No disponible para asignación
+                                                                </span>
                                                             @endif
-
-                                                        </div>
-                                                        <div class="text-sm text-gray-500">
-                                                            @if($usuario->unidad_administrativa_id)
-                                                                {{$usuario->cargo}}
-                                                            @endif
-                                                        </div>
-                                                    </td>
-                                                    <td class="px-6 py-4 whitespace-nowrap">
-                                                <span
-                                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                                    Activo
-                                                </span>
-                                                    </td>
-                                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                        @switch($usuario->user_type)
-                                                            @case(1)
-                                                            Admin
-                                                            @break
-
-                                                            @case(2)
-                                                            Usuario
-                                                            @break
-
-                                                            @default
-                                                            Empleado
-                                                        @endswitch
+                                                        @endif
                                                     </td>
                                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                        <a href="{{ route('empleados.show',$usuario) }}"
-                                                           class="text-indigo-600 hover:text-indigo-900">Ver
-                                                        </a><br>
-                                                        <a href="{{ route('empleados.edit',$usuario) }}"
-                                                           class="text-indigo-600 hover:text-indigo-900">Editar
-                                                        </a>
+                                                        <a href="{{ route('devices.edit',$device) }}"
+                                                           class="text-indigo-600 hover:text-indigo-900">Editar</a>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -140,7 +123,7 @@
                                         </table>
                                         <div
                                             class="bg-white px-4 py-3 items-center justify-between border-t border-gray-200 sm:px-6">
-                                            {{ $usuarios->links() }}
+                                            {{ $devices->links() }}
                                         </div>
                                     @else
                                         <div

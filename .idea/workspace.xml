@@ -2,19 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f59c9022-269c-4e24-8075-a0f86d27c06f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/UserRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/usuarios/_form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/usuarios/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php-docker-settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-docker-settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/ReguardosController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Livewire/ResguardosEmpleadosTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Livewire/ResguardosTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/ResguardoRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/livewire/resguardos-empleado-table.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/livewire/resguardos-table.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/resguardos/_form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/resguardos/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/resguardos/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/resguardos/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/usuarios/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.lando.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.lando.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/UnidadAdministrativaController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/DevicesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/DevicesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/UsuariosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/UsuariosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Livewire/UsersTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Livewire/UsersTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Models/Resguardo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Models/Resguardo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/migrations/2020_11_21_080514_create_resguardos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/migrations/2020_11_21_080514_create_resguardos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/catalogos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/catalogos.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/views/livewire/users-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/livewire/users-table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/usuarios/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/usuarios/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/usuarios/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/navigation-dropdown.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/usuarios/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/usuarios/_form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,18 +176,18 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/app/Http/Requests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/resources/views/usuarios" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/app/Http/Requests" />
       <recent name="$PROJECT_DIR$/app/resources/views/usuarios" />
       <recent name="$PROJECT_DIR$/app/app/Http/Livewire" />
-      <recent name="$PROJECT_DIR$/app/resources/views/devices" />
       <recent name="$PROJECT_DIR$/app/resources/views/livewire" />
+      <recent name="$PROJECT_DIR$/app/resources/views" />
+      <recent name="$PROJECT_DIR$/app/app/Http/Controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/resources/views/livewire" />
@@ -204,6 +213,8 @@
       <workItem from="1606782515825" duration="31429000" />
       <workItem from="1606962623950" duration="3162000" />
       <workItem from="1606972915359" duration="4491000" />
+      <workItem from="1607049310572" duration="4409000" />
+      <workItem from="1607112065194" duration="12109000" />
     </task>
     <servers />
   </component>
@@ -213,60 +224,13 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="623" y="50" key="#CLI_Interpreters" timestamp="1606972470802">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="623" y="71" key="#CLI_Interpreters/-132.-1055.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1606962723690" />
-    <state x="623" y="50" key="#CLI_Interpreters/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606972470802" />
-    <state x="805" y="136" width="594" height="551" key="#Docker4" timestamp="1606962712921">
-      <screen x="0" y="25" width="1680" height="964" />
-    </state>
-    <state x="805" y="136" width="594" height="551" key="#Docker4/-132.-1055.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1606962712921" />
-    <state x="515" y="330" width="937" height="535" key="#Log_Highlighting_(ideolog)" timestamp="1605863066094">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="515" y="330" width="937" height="535" key="#Log_Highlighting_(ideolog)/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1605863066094" />
-    <state x="578" y="284" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606977928084">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="578" y="284" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606977928084" />
-    <state x="556" y="255" key="NewPhpClassDialog" timestamp="1606942399491">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="556" y="255" key="NewPhpClassDialog/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606942399491" />
-    <state x="660" y="452" key="NewPhpFileDialog" timestamp="1606810962511">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="622" y="-615" key="NewPhpFileDialog/-132.-1080.1920.1080/0.0.1680.1050@-132.-1080.1920.1080" timestamp="1606799888780" />
-    <state x="660" y="452" key="NewPhpFileDialog/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606810962511" />
-    <state x="660" y="452" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1606119501581" />
-    <state x="544" y="67" key="SettingsEditor" timestamp="1606972478533">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="544" y="67" key="SettingsEditor/-132.-1055.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1606962726213" />
-    <state x="544" y="67" key="SettingsEditor/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606972478533" />
-    <state x="641" y="443" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606971817774">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="641" y="443" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606971817774" />
-    <state x="486" y="-792" width="699" height="504" key="find.popup" timestamp="1606798629479">
-      <screen x="-132" y="-1080" width="1920" height="1080" />
-    </state>
-    <state x="486" y="-792" width="699" height="504" key="find.popup/-132.-1080.1920.1080/0.0.1680.1050@-132.-1080.1920.1080" timestamp="1606798629479" />
-    <state x="541" y="280" width="611" height="490" key="find.popup/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606787670031" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1606935692304">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/-132.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606935692304" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/routes/web.php</url>
-          <line>38</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/app/app/Http/Controllers/UsuariosController.php</url>
+          <line>133</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

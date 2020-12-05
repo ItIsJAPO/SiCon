@@ -18,6 +18,9 @@ class User extends Authenticatable
     use TwoFactorAuthenticatable;
 
     const ROL_ADMIN = 1;
+    const ROL_USUARIO = 2;
+    const ROL_EMPLEADO = 3;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -29,6 +32,7 @@ class User extends Authenticatable
         'password',
         'user_type',
         'cargo',
+        'unidad_administrativa_id',
     ];
 
     /**
@@ -61,5 +65,10 @@ class User extends Authenticatable
     public function unidadAdministrativa()
     {
         return $this->belongsTo(UnidadAdministrativa::class);
+    }
+
+    public function resguardo()
+    {
+        return $this->hasMany(Resguardo::class,'reguardos_usuario_id_foreeign');
     }
 }

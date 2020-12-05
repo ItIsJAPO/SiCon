@@ -17,7 +17,6 @@ class CreateResguardosTable extends Migration
             $table->id();
             $table->foreignId('device_id')->constrained("dispositivos");
             $table->foreignId('user_id')->constrained("users");
-            $table->integer('estatus')->unsigned();
             $table->timestamps();
         });
     }

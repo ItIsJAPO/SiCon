@@ -17,18 +17,32 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('empleados.index') }}" :active="request()->routeIs('empleados.*')">
-                        Empleados
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('catalogs') }}"
-                                    :active="request()->routeIs('catalogs.*')|
+
+                    @if(Auth::user()->user_type === 3)
+                        <x-jet-nav-link href="{{ route('empleados.show',Auth::user()->id) }}"
+                                        :active="request()->routeIs('empleados.*')">
+                            Empleado
+                        </x-jet-nav-link>
+                    @else
+                        <x-jet-nav-link href="{{ route('resguardos.create') }}"
+                                        :active="request()->routeIs('resguardos.*')">
+                            Nuevo resguardo
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('empleados.index') }}"
+                                        :active="request()->routeIs('empleados.*')">
+                            Empleados
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('catalogs') }}"
+                                        :active="request()->routeIs('catalogs')|
                                     request()->routeIs('type_devices.*')|
                                     request()->routeIs('administrative_units.*')">
-                        Catalogos
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('devices.index') }}" :active="request()->routeIs('devices.*')">
-                        Dispositivos
-                    </x-jet-nav-link>
+                            Catalogos
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('devices.index') }}" :active="request()->routeIs('devices.*')">
+                            Dispositivos
+                        </x-jet-nav-link>
+                    @endif
+
                 </div>
             </div>
 

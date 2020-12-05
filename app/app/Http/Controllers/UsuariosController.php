@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserRequest;
 use App\Models\UnidadAdministrativa;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
@@ -21,7 +21,10 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        return view('usuarios.index');
+        if (Auth::user()->user_type === User::ROL_ADMIN) {
+            return view('usuarios.index');
+        }
+        abort(403);
     }
 
     /**
@@ -76,9 +79,17 @@ class UsuariosController extends Controller
      */
     public function show(User $empleado)
     {
+        if (Auth::user()->user_type === User::ROL_EMPLEADO) {
+            $empleado = Auth::user();
+        }
 //        dd(Auth::user());
-//        return $empleado;
-
+//        dd($empleado->id);
+        $resguardos = DB::table('dispositivos as d')->select('d.*', 'r.id as resguardo_id')
+            ->leftJoin('resguardos as r', 'd.id', '=', 'r.device_id')
+            ->where('r.user_id', '=', $empleado->id)
+            ->get();
+//        dd($resguardos);
+        return view('usuarios.show', ["user" => $empleado, "resguardos" => $resguardos]);
     }
 
     /**
@@ -89,7 +100,6 @@ class UsuariosController extends Controller
      */
     public function edit(User $empleado)
     {
-
         return view(
             'usuarios.edit',
             [
@@ -109,7 +119,15 @@ class UsuariosController extends Controller
      */
     public function update(UserRequest $request, User $empleado)
     {
+        if ($request->get('unidad_administrativa') === 0) {
+            $ua = null;
+        } else {
+            $ua = $request->get('unidad_administrativa');
+        }
+//         return $ua;
+
         $request->validated();
+//        return $request;
         $empleado->update(
             [
                 'name' => $request->get('name'),
@@ -117,7 +135,7 @@ class UsuariosController extends Controller
                 'cargo' => $request->get('cargo'),
                 'user_type' => $request->get('rol'),
                 'password' => Hash::make(Str::random(25)),
-                'unidad_administrativa_id' => $request->get('unidad_administrativa'),
+                'unidad_administrativa_id' => $ua,
             ]
         );
         return redirect()->route('empleados.index')->with('status', 'El nuevo empleado fue actualizado con éxito');

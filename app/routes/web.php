@@ -2,9 +2,15 @@
 
 use App\Http\Controllers\AdministrativeUnitController;
 use App\Http\Controllers\DevicesController;
+use App\Http\Controllers\ReguardosController;
 use App\Http\Controllers\TypeDeviceController;
 use App\Http\Controllers\UsuariosController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+
+//DB::listen(function ($query){
+//    var_dump($query->sql);
+//});
 
 /*
 |--------------------------------------------------------------------------
@@ -64,4 +70,9 @@ Route::middleware(['auth:sanctum', 'verified'])->resource(
     'devices',
     DevicesController::class
 )->names('devices');
+
+Route::middleware(['auth:sanctum', 'verified'])->resource(
+    'resguardos',
+    ReguardosController::class
+)->names('resguardos');
 

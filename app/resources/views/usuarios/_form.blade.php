@@ -25,17 +25,17 @@
                 <select id="rol" name="rol"
                         autocomplete="country"
                         class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                    <option value="1" @if(1===$user->rol)
+                    <option value="1" @if(1===$user->user_type)
                     selected
                         @endif>
                         Administrador
                     </option>
-                    <option value="2" @if(2===$user->rol)
+                    <option value="2" @if(2===$user->user_type)
                     selected
                         @endif>
                         Usuario
                     </option>
-                    <option value="3" @if(3===$user->rol| !($user->rol))
+                    <option value="3" @if(3===$user->user_type| !($user->user_type))
                     selected
                         @endif>
                         Empleado
