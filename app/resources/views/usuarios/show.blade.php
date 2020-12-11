@@ -115,7 +115,11 @@
                                             </span>
                                         </div>
                                         <div class="ml-4 flex-shrink-0">
-                                            @if($user->user_type===1|$user->user_type===2)
+                                            <a href="{{ route('resguardos.acuse',$resguardo->resguardo_id) }}" class="font-medium text-indigo-600 hover:text-indigo-500">Ver oficio de asigación</a>
+
+
+                                        @if($user->user_type===1|$user->user_type===2)
+                                            <br>
                                                 <form method="POST" action="{{ route('resguardos.destroy',$resguardo->resguardo_id) }}">
                                                     @csrf
                                                     @method('DELETE')

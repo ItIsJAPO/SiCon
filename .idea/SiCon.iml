@@ -125,6 +125,12 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/sabberworm/php-css-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laraveles/spanish" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/phenx/php-font-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/phenx/php-svg-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/dompdf/dompdf" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/barryvdh/laravel-dompdf" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

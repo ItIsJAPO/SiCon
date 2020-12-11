@@ -5,7 +5,6 @@ use App\Http\Controllers\DevicesController;
 use App\Http\Controllers\ReguardosController;
 use App\Http\Controllers\TypeDeviceController;
 use App\Http\Controllers\UsuariosController;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 //DB::listen(function ($query){
@@ -29,6 +28,22 @@ Route::get(
         return view('layouts.inicio');
     }
 );
+
+Route::middleware(['auth:sanctum', 'verified'])->resource(
+    'empleados',
+    UsuariosController::class
+)->names('empleados');
+
+//Route::get(
+//    '/pdf',
+//    function () {
+////        $pdf = App::make('dompdf.wrapper');
+////        $pdf->loadHTML('<h1>Test</h1>');
+//        $pdf = PDF::loadView('reports.asignacion');
+//        return view('reports.asignacion');
+//        return $pdf->stream();
+//    }
+//);
 
 Route::middleware(['auth:sanctum', 'verified'])->get(
     '/dashboard',
@@ -79,5 +94,19 @@ Route::middleware(['auth:sanctum', 'verified'])->resource(
 Route::middleware(['auth:sanctum', 'verified'])->resource(
     'resguardos',
     ReguardosController::class
-)->names('resguardos')->only(['create','store', 'destroy']);
+)->names('resguardos')->only(['create', 'store', 'destroy']);
 
+
+Route::get(
+    '/resguardos/acuse/{uuid}',
+   [ReguardosController::class, 'reportAsignacion']
+)->name('resguardos.acuse');
+
+//Route::middleware(['auth:sanctum', 'verified'])->get(
+//    '/resguardos/pdf',
+//    [TypeDeviceController::class, 'reportAsignacion']
+//)->names('resguardoss');
+//Route::middleware(['auth:sanctum', 'verified'])->get(
+//    '/empleados',
+//    \App\Http\Livewire\UsersTable::class
+//)->name('empleados');

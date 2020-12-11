@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f59c9022-269c-4e24-8075-a0f86d27c06f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/config/dompdf.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/public/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/public/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/public/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/reports/asignacion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SiCon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SiCon.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/navigation-dropdown.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/ReguardosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/ReguardosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/usuarios/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/usuarios/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +37,6 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="devwithlando/php:7.3-apache-2 (1)">
     <include_path>
       <path value="$PROJECT_DIR$/app/vendor/bacon/bacon-qr-code" />
@@ -143,6 +156,12 @@
       <path value="$PROJECT_DIR$/app/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/app/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/app/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/app/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/app/vendor/laraveles/spanish" />
+      <path value="$PROJECT_DIR$/app/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/app/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/app/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/app/vendor/barryvdh/laravel-dompdf" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kXsDMVRRDlBKciUZVqIRULT8ym" />
@@ -157,18 +176,18 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/resources/views/usuarios" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/public/css" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/public/css" />
+      <recent name="$PROJECT_DIR$/app/resources/js/bootstrap" />
+      <recent name="$PROJECT_DIR$/app/resources/css/bootstrap" />
+      <recent name="$PROJECT_DIR$/app/resources/css" />
       <recent name="$PROJECT_DIR$/app/resources/views/usuarios" />
-      <recent name="$PROJECT_DIR$/app/app/Http/Livewire" />
-      <recent name="$PROJECT_DIR$/app/resources/views/livewire" />
-      <recent name="$PROJECT_DIR$/app/resources/views" />
-      <recent name="$PROJECT_DIR$/app/app/Http/Controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/resources/views/livewire" />
@@ -195,7 +214,11 @@
       <workItem from="1606962623950" duration="3162000" />
       <workItem from="1606972915359" duration="4491000" />
       <workItem from="1607049310572" duration="4409000" />
-      <workItem from="1607112065194" duration="13061000" />
+      <workItem from="1607112065194" duration="13147000" />
+      <workItem from="1607320887753" duration="34000" />
+      <workItem from="1607406949919" duration="178000" />
+      <workItem from="1607618012803" duration="10000" />
+      <workItem from="1607705345972" duration="9395000" />
     </task>
     <servers />
   </component>
