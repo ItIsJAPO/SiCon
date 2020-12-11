@@ -6,6 +6,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Date\Date;
 
 class Resguardo extends Model
 {
@@ -22,6 +23,11 @@ class Resguardo extends Model
         'device_id',
         'user_id',
     ];
+
+    public function getCreatedAtAtribute($date)
+    {
+        return new Date($date);
+    }
 
     public function user()
     {

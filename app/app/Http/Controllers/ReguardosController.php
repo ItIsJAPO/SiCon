@@ -150,9 +150,9 @@ class ReguardosController extends Controller
     public function reportAsignacion($uuid)
     {
         $resguardo=Resguardo::findorfail($uuid);
-        setlocale(LC_TIME, "es_Mx");
+//        setlocale(LC_TIME, "es_Mx");
         $user=User::find($resguardo->user_id);
-        $fecha=$resguardo->created_at;
+        $fecha=new \Jenssegers\Date\Date($resguardo->created_at);
         $device=Device::find($resguardo->device_id);
         $pdf = PDF::loadView('reports.asignacion',compact("user","device", "fecha"));
         return $pdf->stream();

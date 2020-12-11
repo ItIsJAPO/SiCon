@@ -125,6 +125,7 @@
       <path value="$PROJECT_DIR$/app/vendor/phenx/php-svg-lib" />
       <path value="$PROJECT_DIR$/app/vendor/dompdf/dompdf" />
       <path value="$PROJECT_DIR$/app/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/app/vendor/jenssegers/date" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

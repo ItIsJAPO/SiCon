@@ -131,6 +131,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phenx/php-svg-lib" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/dompdf/dompdf" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/barryvdh/laravel-dompdf" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/jenssegers/date" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

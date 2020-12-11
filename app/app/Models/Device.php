@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Date\Date;
 
 class Device extends Model
 {
@@ -55,6 +56,11 @@ class Device extends Model
     public function resguardos()
     {
         return $this->hasOne(Resguardo::class);
+    }
+
+    public function getCreatedAtAtribute($date)
+    {
+        return new Date($date);
     }
 
 }

@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f59c9022-269c-4e24-8075-a0f86d27c06f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/config/dompdf.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/public/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/public/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/public/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/reports/asignacion.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/SiCon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SiCon.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/ReguardosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/ReguardosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Models/Device.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Models/Device.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Models/Resguardo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Models/Resguardo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/usuarios/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/usuarios/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,6 +153,7 @@
       <path value="$PROJECT_DIR$/app/vendor/phenx/php-svg-lib" />
       <path value="$PROJECT_DIR$/app/vendor/dompdf/dompdf" />
       <path value="$PROJECT_DIR$/app/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/app/vendor/jenssegers/date" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kXsDMVRRDlBKciUZVqIRULT8ym" />
@@ -218,7 +210,7 @@
       <workItem from="1607320887753" duration="34000" />
       <workItem from="1607406949919" duration="178000" />
       <workItem from="1607618012803" duration="10000" />
-      <workItem from="1607705345972" duration="9395000" />
+      <workItem from="1607705345972" duration="10002000" />
     </task>
     <servers />
   </component>
